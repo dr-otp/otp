@@ -31,7 +31,7 @@ export const envs = {
   port: envVars.PORT,
   natsServers: envVars.NATS_SERVERS,
   redisUrl: envVars.REDIS_URL,
-  otpSecret: envVars.OTP_SECRET,
   cacheTtl: envVars.CACHE_TTL,
+  otpSecret: envVars.OTP_SECRET,
   otpTtl: envVars.OTP_TTL,
 };
