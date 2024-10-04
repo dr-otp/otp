@@ -9,6 +9,7 @@ import { envs } from 'src/config';
     CacheModule.register<RedisClientOptions>({
       store: redisStore,
       url: envs.redisUrl,
+      database: envs.redisDb,
     }),
   ],
   exports: [CacheModule],

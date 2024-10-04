@@ -6,6 +6,7 @@ interface EnvVars {
   NATS_SERVERS: string[];
   REDIS_URL: string;
   CACHE_TTL: number;
+  REDIS_DB: number;
   OTP_SECRET: string;
   OTP_TTL: number;
 }
@@ -16,6 +17,7 @@ const envSchema = joi
     NATS_SERVERS: joi.array().items(joi.string()).required(),
     REDIS_URL: joi.string().required(),
     CACHE_TTL: joi.number().required(),
+    REDIS_DB: joi.number().required(),
     OTP_SECRET: joi.string().required(),
     OTP_TTL: joi.number().required(), // 5 minutes
   })
@@ -32,6 +34,7 @@ export const envs = {
   natsServers: envVars.NATS_SERVERS,
   redisUrl: envVars.REDIS_URL,
   cacheTtl: envVars.CACHE_TTL,
+  redisDb: envVars.REDIS_DB,
   otpSecret: envVars.OTP_SECRET,
   otpTtl: envVars.OTP_TTL,
 };
